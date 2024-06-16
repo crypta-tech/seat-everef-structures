@@ -1,0 +1,30 @@
+{
+    "name": "cryptatech/seat-everef-structures",
+    "description": "Populate SeAT UniverseStructures from everef data",
+    "type": "seat-plugin",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Crypta Electrica",
+            "email": "crypta@crypta.tech"
+        }
+    ],
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "CryptaTech\\Seat\\EverefStructures\\": "src/"
+        }
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "CryptaTech\\Seat\\EverefStructures\\EverefStructuresServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "eveseat/web": "^5.0"
+    }
+}
+
