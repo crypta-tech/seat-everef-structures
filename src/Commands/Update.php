@@ -68,7 +68,12 @@ class Update extends Command
 
         if ($this->option('force') == false) {
             $response = $response->withHeaders([
-                'If-None-Match' => setting('cryptatech_seat_everef_structures_etag', true)
+                'If-None-Match' => setting('cryptatech_seat_everef_structures_etag', true),
+                'User-Agent' => 'cryptatech/seat-everef-structures:'
+            ]);
+        } else {
+            $response = $response->withHeaders([
+                'User-Agent' => 'cryptatech/seat-everef-structures:'
             ]);
         }
 
